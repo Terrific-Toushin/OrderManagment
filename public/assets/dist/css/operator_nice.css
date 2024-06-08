@@ -1,0 +1,45 @@
+@media (min-width:768px){body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper,body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer,body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header{transition:margin-left .3s ease-in-out;margin-left:0}}
+
+@page { 
+  size: auto;
+  size: 58mm 50mm;
+  margin: 0mm;
+}
+body.receipt .sheet { width: 58mm; height: auto; }
+@media print {
+  body.receipt {
+    font-size: 12pt;
+      width: 58mm;
+  } 
+} 
+
+/* @page {
+  size: auto;
+  size: A4;
+  margin: 0mm;
+} */
+
+/* @media print {
+  body, #pnlContents {
+      margin: 0;
+      box-shadow: 0;
+  }
+} */
+
+.brand-link .brand-image-xl  {
+    margin-top: -1.13rem;
+  }
+  
+  .brand-text {
+      color: orange;
+      text-shadow: 2px 2px 8px gray;;
+    }
+  
+  .font-logo {
+      font-size: 40px;
+  }
+
+ .outlate{-ms-flex-align:center;align-items:center;background-color:#e9ecef;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:60vh;-ms-flex-pack:center;justify-content:center}
+
+ 
+  

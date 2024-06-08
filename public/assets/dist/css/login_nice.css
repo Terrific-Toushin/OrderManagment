@@ -1,0 +1,16 @@
+.brand-link .brand-image  {
+  margin-top: -.90rem;
+}
+
+.brand-text {
+    color: orange;
+    text-shadow: 2px 2px 8px gray;;
+  }
+
+.font-logo {
+    font-size: 40px;
+}
+
+.errors{
+  color: brown;
+}
