@@ -28,7 +28,7 @@
                     <div class="small-box bg-info">
                         <div class="inner">
                             <h3>{{$panding_kots_count}}</h3>
-            
+
                             <p>Pending KOT</p>
                         </div>
                         <div class="icon">
@@ -44,7 +44,7 @@
                     <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>{{$kitchen_complete_kot_count}}</h3>
-            
+
                             <p>Kitchen complete KOT</p>
                         </div>
                         <div class="icon">
@@ -59,7 +59,7 @@
                     <div class="small-box bg-success">
                         <div class="inner">
                             <h3>{{$total_kots_count}}</h3>
-            
+
                             <p>Total KOT</p>
                         </div>
                         <div class="icon">
@@ -74,7 +74,7 @@
                     <div class="small-box bg-primary">
                         <div class="inner">
                             <h3>{{$cash_print_count}}</h3>
-            
+
                             <p>Cash Print</p>
                         </div>
                         <div class="icon">

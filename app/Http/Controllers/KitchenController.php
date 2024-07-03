@@ -123,7 +123,7 @@ class KitchenController extends Controller
         }, $pending_kots);
 
 //            $kot_items_selects = DB::connection('sqlsrv')->table('tblMenu')->where('repid', '=', $alreadyOrderItem)->get()->toArray();
-        $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblMenu')->select('repid','repname')->whereIn('repid', $alreadyOrderItem)->get()->toArray();
+        $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblmenu')->select('repid','repname')->whereIn('repid', $alreadyOrderItem)->get()->toArray();
         $itemName = [];
         foreach ($kot_items_selects as $kot_items_select){
             $itemName[$kot_items_select->repid] = $kot_items_select->repname;
@@ -176,7 +176,7 @@ class KitchenController extends Controller
             $price = $order_kot_item->price * $qty;
 
 //            $kot_items_selects = DB::connection('sqlsrv')->table('tblMenu')->where('repid', '=', $repID)->get();
-            $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblMenu')->where('repid', '=', $repID)->get();
+            $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblmenu')->where('repid', '=', $repID)->get();
             foreach ($kot_items_selects as $kot_items_select) {
                 $repname = $kot_items_select->repname;
                 $kitchen = $kot_items_select->kitchen;
@@ -196,7 +196,7 @@ class KitchenController extends Controller
             $price_new = $order_kot_item_new->price * $qty_new;
 
 //            $kot_items_selects_new = DB::connection('sqlsrv')->table('tblMenu')->where('repid', '=', $repID)->get();
-            $kot_items_selects_new = DB::connection('mysql')->table('rest_fortis.tblMenu')->where('repid', '=', $repID_new)->get();
+            $kot_items_selects_new = DB::connection('mysql')->table('rest_fortis.tblmenu')->where('repid', '=', $repID_new)->get();
             foreach ($kot_items_selects_new as $kot_items_select_new) {
                 $repname_new = $kot_items_select_new->repname;
                 $kitchen_new = $kot_items_select_new->kitchen;
@@ -216,7 +216,7 @@ class KitchenController extends Controller
             $cancel_price = $cancel_order_kot_item->price * $cancel_qty;
 
 //            $cancel_kot_items_selects = DB::connection('sqlsrv')->table('tblMenu')->where('repid', '=', $cancel_repID)->get();
-            $cancel_kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblMenu')->where('repid', '=', $cancel_repID)->get();
+            $cancel_kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblmenu')->where('repid', '=', $cancel_repID)->get();
             foreach ($cancel_kot_items_selects as $cancel_kot_items_select) {
                 $cancel_repname = $cancel_kot_items_select->repname;
                 $cancel_kitchen = $cancel_kot_items_select->kitchen;
@@ -271,7 +271,7 @@ class KitchenController extends Controller
         }, $kitchen_complete_kots);
 
 //            $kot_items_selects = DB::connection('sqlsrv')->table('tblMenu')->where('repid', '=', $alreadyOrderItem)->get()->toArray();
-        $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblMenu')->select('repid','repname')->whereIn('repid', $alreadyOrderItem)->get()->toArray();
+        $kot_items_selects = DB::connection('mysql')->table('rest_fortis.tblmenu')->select('repid','repname')->whereIn('repid', $alreadyOrderItem)->get()->toArray();
         $itemName = [];
         foreach ($kot_items_selects as $kot_items_select){
             $itemName[$kot_items_select->repid] = $kot_items_select->repname;

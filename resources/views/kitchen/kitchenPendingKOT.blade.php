@@ -114,7 +114,6 @@
                                                     <button type="button" class=" btn btn-success" >Completed</button>
                                                 </a>
                                             @endif
-
                                         </td>
                                     </tr>
                                 @endforeach

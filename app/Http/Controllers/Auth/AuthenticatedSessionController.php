@@ -19,7 +19,8 @@ class AuthenticatedSessionController extends Controller
     public function create(): View
     {
         // return view('auth.login');
-        $tblRestName_data = DB::connection('mysql')->table('rest_fortis.tblRestName')->orderBy('ResName')->get();
+//        $tblRestName_data = DB::connection('sqlsrv')->table('tblRestName')->orderBy('ResName')->get();
+        $tblRestName_data = DB::connection('mysql')->table('rest_fortis.tblrestname')->orderBy('ResName')->get();
 //        $tblRestName_data = '';
         return view('login',compact('tblRestName_data'));
     }

@@ -81,7 +81,7 @@ return [
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             // 'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST_SQLSRV', '103.191.178.238'),
+            'host' => env('DB_HOST_SQLSRV', '103.191.178.238\NICOF_BA'),
             'port' => env('DB_PORT_SQLSRV', '1433'),
             'database' => env('DB_DATABASE_SQLSRV', 'REST_FORTIS'),
             'username' => env('DB_USERNAME_SQLSRV', 'NICKOT'),
@@ -89,7 +89,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
+             'encrypt' => env('DB_ENCRYPT', 'no'),
             'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'true'),
         ],
 

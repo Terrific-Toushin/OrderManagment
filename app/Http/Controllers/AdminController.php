@@ -101,8 +101,10 @@ class AdminController extends Controller
     public function AdminCreateUser(){
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        $outlets = DB::connection('mysql')->table('rest_fortis.tblRestName')->orderBy('ResName')->get();
-        $tblMenu_data = DB::connection('mysql')->table('rest_fortis.tblMenu')->orderBy('repname')->get();
+//        $outlets = DB::connection('sqlsrv')->table('tblRestName')->orderBy('ResName')->get();
+        $outlets = DB::connection('mysql')->table('rest_fortis.tblrestname')->orderBy('ResName')->get();
+//        $tblMenu_data = DB::connection('sqlsrv')->table('tblMenu')->orderBy('repname')->get();
+        $tblMenu_data = DB::connection('mysql')->table('rest_fortis.tblmenu')->orderBy('repname')->get();
         $kitchen = array();
         foreach($tblMenu_data as $kitchen_items){
             array_push($kitchen, $kitchen_items->kitchen);
@@ -157,8 +159,10 @@ class AdminController extends Controller
     public function AdminEditUser(){
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        $outlets = DB::connection('mysql')->table('rest_fortis.tblRestName')->orderBy('ResName')->get();
-        $tblMenu_data = DB::connection('mysql')->table('rest_fortis.tblMenu')->orderBy('repname')->get();
+//        $outlets = DB::connection('sqlsrv')->table('tblRestName')->orderBy('ResName')->get();
+        $outlets = DB::connection('mysql')->table('rest_fortis.tblrestname')->orderBy('ResName')->get();
+//        $tblMenu_data = DB::connection('sqlsrv')->table('tblMenu')->orderBy('repname')->get();
+        $tblMenu_data = DB::connection('mysql')->table('rest_fortis.tblmenu')->orderBy('repname')->get();
         $kitchen = array();
         foreach($tblMenu_data as $kitchen_items){
             array_push($kitchen, $kitchen_items->kitchen);

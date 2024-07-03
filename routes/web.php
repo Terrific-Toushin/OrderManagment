@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\KitchenController;
+use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 require __DIR__.'/auth.php';
 /*
@@ -25,6 +26,8 @@ Route::get('/', function () {
     // return view('login',compact('tblRestName_data'));
     return redirect('/login');
 });
+Route::get('/clear/route', [ConfigController::class, 'clearRoute']);
+Route::get('/clear/cache', [ConfigController::class, 'clearCache']);
 
 //Route::get('/login', function () {
 //    return view('login');
